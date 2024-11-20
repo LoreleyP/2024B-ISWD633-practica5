@@ -3,12 +3,12 @@ version: '3.8'
 services:
   mysql-service:
     image: mysql:8.4
-    container_name: <valor>
+    container_name: <Msqladmin>
     environment:
-      MYSQL_ROOT_PASSWORD: <valor>
-      MYSQL_DATABASE: <valor>
-      MYSQL_USER: <valor>
-      MYSQL_PASSWORD: <valor>
+      MYSQL_ROOT_PASSWORD: <root>
+      MYSQL_DATABASE: <MYSQL>
+      MYSQL_USER: <root>
+      MYSQL_PASSWORD: <root>
     volumes:
       - <valor>:<valor>
     networks:
@@ -22,14 +22,14 @@ services:
 
   wordpress-service:
     image: wordpress:6
-    container_name: <valor>
+    container_name: <WORDPRESS>
     ports:
-      - <valor>:<valor>
+      - <8080>:<80>
     environment:
-      WORDPRESS_DB_HOST: <valor>
-      WORDPRESS_DB_USER: <valor>
-      WORDPRESS_DB_PASSWORD: <valor>
-      WORDPRESS_DB_NAME: <valor>
+      WORDPRESS_DB_HOST: <root>
+      WORDPRESS_DB_USER: <root>
+      WORDPRESS_DB_PASSWORD: <root>
+      WORDPRESS_DB_NAME: <WORDPRESS>
     volumes:
       - <valor>:<valor>
     networks:
